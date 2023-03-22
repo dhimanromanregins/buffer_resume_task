@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Form</title>
+</head>
+<body>
+    <h1>Profile Form</h1>
+    <form method="POST" action="{% url 'profile' %}">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" name="phone" required>
+
+        <label for="school">School:</label>
+        <input type="text" name="school" required>
+
+        <label for="degree">Degree:</label>
+        <input type="text" name="degree" required>
+
+        <label for="university">University:</label>
+        <input type="text" name="university" required>
+
+        <label for="skill">Skill:</label>
+        <textarea name="skill" rows="5" required></textarea>
+
+        <label for="about_you">About You:</label>
+        <textarea name="about_you" rows="5" required></textarea>
+
+        <label for="previous_projects">Previous Projects:</label>
+        <textarea name="previous_projects" rows="5" required></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+<a  href="{% url 'resume' %}">Download resume</a>
+</body>
+</html>
